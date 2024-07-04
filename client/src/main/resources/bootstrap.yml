@@ -1,7 +1,0 @@
-spring:
-  application:
-    name: vault-client
-  cloud:
-    config:
-      url: http://localhost:8888
-      token: hvs.OnVHYGu1mPHz3wJ4J9qCFbfQ

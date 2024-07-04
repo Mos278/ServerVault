@@ -1,4 +1,4 @@
-package com.vault.client
+package com.vault.client.Controller
 
 import com.vault.client.Config.TestConfig
 import org.springframework.cloud.context.config.annotation.RefreshScope

@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 spring:
   cloud:
     bus:
@@ -32,7 +32,6 @@ spring:
       port: 8200
       connection-timeout: 5000
       read-timeout: 15000
-
   config:
     import: vault://secret/uchoose/app-config/app,
       vault://secret/uchoose/app-config/app/dev,
@@ -53,6 +52,7 @@ endpoints:
           enabled: true
       env:
         enabled: true
+
 ex-profile:
   value1: ${value1}
   value2: ${value2}

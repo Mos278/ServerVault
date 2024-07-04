@@ -7,7 +7,7 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/3.3.1/631629214272c316ec66e453fde42638392144fa/spring-boot-configuration-processor-3.3.1.jar" />
         </processorPath>
-        <module name="client.main" />
+        <module name="server.main" />
       </profile>
     </annotationProcessing>
   </component>
