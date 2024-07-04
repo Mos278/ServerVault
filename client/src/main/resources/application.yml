@@ -1,0 +1,43 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          autoAddPartitions: true
+          brokers: localhost:9092
+          zkNodes: localhost:2181
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+      refresh:
+        enabled: true
+    env:
+      enabled: true
+  config:
+    import: "configserver:"
+    #Cannot Use PATH/*
+
+ex-profile:
+  value1: ${value1}
+  value2: ${value2}
+  value3: ${value3}
+
+
+endpoints:
+  spring:
+    cloud:
+      bus:
+        refresh:
+          enabled: true
+      env:
+        enabled: true
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

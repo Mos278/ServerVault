@@ -1,0 +1,45 @@
+server:
+  port: 8888
+spring:
+  profiles:
+    active: vault
+  application:
+    name: vault-server-config
+  cloud:
+    bus:
+      enabled: true
+    config:
+      server:
+        vault:
+          enabled: true
+          order: 1
+          token-header: X-Config-Token
+    vault:
+      kv:
+        enabled: true
+        application-name: vault
+      authentication: TOKEN
+      token: hvs.OnVHYGu1mPHz3wJ4J9qCFbfQ #Token User
+      scheme: http
+      host: 127.0.0.1
+      port: 8200
+      connection-timeout: 5000
+      read-timeout: 15000
+      backend: secret
+      default-context: uchoose/app-config/app,uchoose/app-config/app/dev,uchoose/app-config/app/remote
+    #Cannot Use PATH/*
+
+
+endpoints:
+    spring:
+      cloud:
+        bus:
+          refresh:
+            enabled: true
+        env:
+          enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
