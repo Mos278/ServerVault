@@ -26,7 +26,7 @@ spring:
         enabled: true
         application-name: vault
       authentication: TOKEN
-      token: hvs.OnVHYGu1mPHz3wJ4J9qCFbfQ #Token User
+      token:  #Token User
       scheme: http
       host: 127.0.0.1
       port: 8200
